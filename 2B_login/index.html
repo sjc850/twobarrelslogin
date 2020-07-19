@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/23b05a953e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Pizza Finder</title>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="landing">
+    <div class="landing-top">
+        <i class="fas fa-pizza-slice"></i>
+        <button class="loginTop" id="loginTop">Login</button>
+    </div>
+
+<!-- BODY -->
+
+    <div class="landing-content">
+        <h1 class="topText">a slice above the rest</h1>
+        <h2 class="bottomText">A full pizza database to help you find the best pizza near you based on what matters to you most.</h2>
+        <button class="login" id="login">Login</button>
+        <button class="trial" id="trial">Start Your 30 Day Free Trial Now!</button>
+    </div>
+
+<!-- FORM POPUPS -->
+
+<div class="popBackLogin">
+    <div class="loginPop">
+        <a href="#" class="forgot">forgot password?</a>
+        <div class="closeLogin">+</div>
+        <i class="fas fa-user-circle"></i>
+        <form action="" class="form">
+            <p>Hey, Welcome Back!</p>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="submit" id="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<div class="popBackTrial">
+    <div class="signupPop">
+        <div class="closeTrial">+</div>
+        <i class="fas fa-user-circle"></i>
+        <form action="" class="form">
+            <p>Get Started Now!</p>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="submit" id="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+</div>
+
+<!-- BUTTON ACTIONS -->
+
+<script>
+    document.getElementById('login').addEventListener('click', function()
+{
+    document.querySelector('.popBackLogin').style.display = 'flex';
+});
+
+    document.getElementById('loginTop').addEventListener('click', function()
+{
+    document.querySelector('.popBackLogin').style.display = 'flex';
+});
+
+document.getElementById('trial').addEventListener('click', function()
+{
+    document.querySelector('.popBackTrial').style.display = 'flex';
+});
+
+    document.querySelector('.closeLogin').addEventListener('click', function() {
+        document.querySelector('.popBackLogin').style.display = 'none';
+    });
+
+    document.querySelector('.closeTrial').addEventListener('click', function() {
+        document.querySelector('.popBackTrial').style.display = 'none';
+    });
+
+</script>
+</body>
+</html>
